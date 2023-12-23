@@ -15,4 +15,4 @@ function api(){
     })
 }
 
-document.addEventListener(DOMContentLoaded,api())
+document.addEventListener('DOMContentLoaded',api())
