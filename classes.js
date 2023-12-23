@@ -6,3 +6,9 @@ class Rectangle{
         this.length = length
     }
 }
+
+fetch('https://api-nba-v1.p.rapidapi.com/seasons')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+    })
