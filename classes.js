@@ -8,14 +8,14 @@ class Rectangle{
 }
 
 function api(){
-    fetch('https://api-nba-v1.p.rapidapi.com/seasons')
+    
+    fetch('https://anapioficeandfire.com/api/books')
         .then(response => response.json())
         .then(data => {
             console.log(data)
     })
 }
 
-btn = document.getElementsByClassName('btn')
-btn.addEventListener('click', api()) 
+btn = document.getElementsByClassName('btn').addEventListener('click', api()) 
 
-//document.addEventListener('DOMContentLoaded',api())
+document.addEventListener('DOMContentLoaded',api())
