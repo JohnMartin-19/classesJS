@@ -7,8 +7,12 @@ class Rectangle{
     }
 }
 
-fetch('https://api-nba-v1.p.rapidapi.com/seasons')
+function api(){
+    fetch('https://api-nba-v1.p.rapidapi.com/seasons')
     .then(response => response.json())
     .then(data => {
         console.log(data)
     })
+}
+
+document.addEventListener(DOMContentLoaded,api())
