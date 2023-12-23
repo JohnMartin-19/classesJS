@@ -1,4 +1,4 @@
-//declaration
+
 
 class Rectangle{
     constructor(length, width){
@@ -9,10 +9,13 @@ class Rectangle{
 
 function api(){
     fetch('https://api-nba-v1.p.rapidapi.com/seasons')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
     })
 }
 
-document.addEventListener('DOMContentLoaded',api())
+btn = document.getElementsByClassName('btn')
+btn.addEventListener('click', api()) 
+
+//document.addEventListener('DOMContentLoaded',api())
