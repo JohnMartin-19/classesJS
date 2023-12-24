@@ -2,8 +2,11 @@
 //explicitly describe an obj shape using interface
 
 interface User{
-    name:'john',
-    id:1
+    name:string,
+    id:number
 }
 
-con
+const user1:User = {
+    name:"John Mburu",
+    id:0,
+}
