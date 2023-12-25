@@ -35,3 +35,12 @@ class ExampleClass {
   method() {}
 }
 
+@sealed 
+class Bugreport{
+    type = 'report';
+    title : string
+
+    constructor(t:string){
+        this.title=t;
+    }
+}
