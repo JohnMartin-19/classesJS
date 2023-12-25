@@ -54,3 +54,28 @@ class Bugreport{
 const bug = new Bugreport('needs drak mode pls')
 console.log(bug.title)
 console.log(bug.type)
+
+//method decorators
+
+
+//defining enumerable
+function enumerable(value: boolean) {
+    return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+      descriptor.enumerable = value;
+    };
+  }
+class Greeter{
+    greeting: string
+    constructor(message: string) {
+        this.greeting = message
+
+    }
+    @enumerabe(false)
+    greet(){
+        return 'Hello, ' + this.greeting
+    }
+}
+
+let greets = new Greeter('wassup')
+console.log(greets.greeting)
+console.log(greets.greet())
