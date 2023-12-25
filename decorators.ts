@@ -35,7 +35,13 @@ class ExampleClass {
   method() {}
 }
 
-@sealed 
+
+function reportableClassDecorator<T extends { new (...args: any[]): {} }>(constructor: T) {
+    return class extends constructor {
+      reportingURL = "http://www...";
+    };
+  }
+@reportableClassDecorator
 class Bugreport{
     type = 'report';
     title : string
@@ -44,3 +50,7 @@ class Bugreport{
         this.title=t;
     }
 }
+
+const bug = new Bugreport('needs drak mode pls')
+console.log(bug.title)
+console.log(bug.type)
